@@ -48,5 +48,7 @@ Future<List<double>> recognizeFace(img.Image dimage, Face face) async {
 ```
 
 
-#Face detetion work flow demo
+# Face detetion work flow demo
 ![Face detetion demo](https://github.com/Mahesh-R-Mesta/Image-recognition-app/blob/main/demo_image.png)
+
+Tested on Android only
