@@ -2,7 +2,7 @@
 
 This project demonstrates face detection & recognition using using google-mlkit-face-detection and tenserflow lite 
 
-Here is an article link where implemenation steps are described [Article Link](https://medium.com/analytics-vidhya/face-recognition-authentication-using-flutter-and-tensorflow-lite-2659d941d56e)
+Here is an article link, where implemenation steps are explained [Article Link](https://medium.com/analytics-vidhya/face-recognition-authentication-using-flutter-and-tensorflow-lite-2659d941d56e)
 
 
 Detecting face using google-mlkit-face-detection
