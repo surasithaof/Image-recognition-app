@@ -1,6 +1,3 @@
-import 'dart:ffi';
-import 'dart:typed_data';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:google_mlkit_face_detection/google_mlkit_face_detection.dart';
@@ -42,7 +39,8 @@ class FaceRecognition {
     double y = faceDetected.boundingBox.top - 10.0;
     double w = faceDetected.boundingBox.width + 10.0;
     double h = faceDetected.boundingBox.height + 10.0;
-    return img.copyCrop(convertedImage, x: x.round(), y: y.round(), width: w.round(), height: h.round());
+    return img.copyCrop(convertedImage,
+        x: x.round(), y: y.round(), width: w.round(), height: h.round());
   }
 
   Float32List imageToByteListFloat32(img.Image image) {

@@ -3,16 +3,22 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:image_recognizer/model/face_model.dart';
 import 'package:image_recognizer/model/face_registry.dart';
-import 'package:image/image.dart' as img;
 
 class RegisterFaceDialog extends StatelessWidget {
   final BuildContext context;
   final Uint8List imageBytes;
   final User person;
-  const RegisterFaceDialog({super.key, required this.imageBytes, required this.person, required this.context});
+  const RegisterFaceDialog(
+      {super.key,
+      required this.imageBytes,
+      required this.person,
+      required this.context});
 
   Future<void> show() async {
-    await showDialog(context: context, builder: (ctx) => RegisterFaceDialog(context: context, imageBytes: imageBytes, person: person));
+    await showDialog(
+        context: context,
+        builder: (ctx) => RegisterFaceDialog(
+            context: context, imageBytes: imageBytes, person: person));
   }
 
   @override
@@ -21,7 +27,8 @@ class RegisterFaceDialog extends StatelessWidget {
       child: SizedBox(
         width: MediaQuery.of(context).size.width * 0.7,
         child: Card(
-          margin: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+          margin:
+              EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
           child: Padding(
             padding: const EdgeInsets.all(15),
@@ -35,7 +42,8 @@ class RegisterFaceDialog extends StatelessWidget {
                   onChanged: (text) {
                     person.name = text;
                   },
-                  decoration: const InputDecoration(hintText: 'Name', border: OutlineInputBorder()),
+                  decoration: const InputDecoration(
+                      hintText: 'Name', border: OutlineInputBorder()),
                 ),
                 ElevatedButton(
                     onPressed: () {

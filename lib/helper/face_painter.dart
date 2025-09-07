@@ -43,7 +43,8 @@ class FaceDetectorPainter extends CustomPainter {
 
       final textPainter = TextPainter(textDirection: TextDirection.ltr)
         ..text = TextSpan(
-            text: "Name: ${person.name}",
+            text:
+                "Name: ${person.name}, Accuracy: ${accuracy.toStringAsFixed(2)}",
             style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w600,
